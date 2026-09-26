@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUXE — Premium Fashion</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: white;
+    }
+
+    header {
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6%;
+      border-bottom: 1px solid #252525;
+      position: sticky;
+      top: 0;
+      background: #0b0b0b;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 25px;
+      letter-spacing: 5px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .cart {
+      border: 1px solid #555;
+      padding: 10px 16px;
+      border-radius: 25px;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      padding: 7%;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.25)),
+        url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1800&q=80")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero small {
+      letter-spacing: 4px;
+      color: #aaa;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 90px);
+      line-height: .95;
+      margin: 20px 0;
+    }
+
+    .hero p {
+      color: #ccc;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 28px;
+      background: white;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 3px;
+    }
+
+    .section {
+      padding: 70px 6%;
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .product {
+      background: #151515;
+      overflow: hidden;
+    }
+
+    .product img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+      transition: .4s;
+    }
+
+    .product:hover img {
+      transform: scale(1.04);
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 8px;
+    }
+
+    .price {
+      color: #bbb;
+    }
+
+    footer {
+      padding: 40px 6%;
+      border-top: 1px solid #252525;
+      color: #888;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      nav a:not(.cart) {
+        display: none;
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product img {
+        height: 280px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .product img {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">LUXE</div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#" class="cart">🛒 Cart (0)</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <small>NEW COLLECTION 2026</small>
+
+    <h1>WEAR<br>YOUR<br>STORY.</h1>
+
+    <p>
+      Premium fashion designed for people who don't follow trends.
+      Discover our latest collection.
+    </p>
+
+    <a href="#shop" class="btn">SHOP COLLECTION</a>
+  </div>
+</section>
+
+<section class="section" id="shop">
+
+  <div class="section-title">
+    <h2>Featured Pieces</h2>
+    <span>NEW ARRIVALS</span>
+  </div>
+
+  <div class="products">
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80">
+      <div class="product-info">
+        <h3>Essential Jacket</h3>
+        <p class="price">₹2,999</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80">
+      <div class="product-info">
+        <h3>Urban Collection</h3>
+        <p class="price">₹2,499</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80">
+      <div class="product-info">
+        <h3>Classic Fit</h3>
+        <p class="price">₹1,999</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80">
+      <div class="product-info">
+        <h3>Signature Look</h3>
+        <p class="price">₹3,499</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 LUXE — Premium Fashion
+</footer>
+
+</body>
+</html>
